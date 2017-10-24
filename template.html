@@ -1,0 +1,220 @@
+<!DOCTYPE html>
+
+<html lang="zh-ch">
+	<head>
+		<meta charset="utf-8">
+		<title>所有html元素样式</title>
+		<meta name="viewport" content="width=device-width,minimum-scale=1.0,maximum-scale=1.0,user-scalable=no">
+		<style type="text/css">
+				tr{vertical-align: text-top;}
+				#tb{background: DarkGray;width: 100%;height: 708px;padding: 0px}
+				#td1{height: 10%;background: green}
+				#td2{height: 80%;width: 20%; background: Aquamarine;}
+				#td3{height: 80%;width: 80%}
+				#td4{height: 10%;background: blue}
+				nav{width: 100%;height: 40px;background: #E0FFFF;text-align: center;padding: 6px;}
+				li{display: inline;}
+				a{text-decoration: none;}
+		</style>
+	</head>
+
+	<body>
+
+		<details>
+			<summary></summary>
+			<hr>
+		</details>
+<!-- ===================================================== -->
+		<details>
+			<summary></summary>
+			<hr>
+		</details>
+<!-- ===================================================== -->
+		<details open="">
+			<summary>a</summary>
+			<a href="http://www.baidu.com"  target="_blank"><img src="https://ss0.bdstatic.com/5aV1bjqh_Q23odCf/static/superman/img/logo/bd_logo1_31bdc765.png" alt="百度图片" title="百度图片" width="100px"></a>
+			<a href="http://www.baidu.com"  target="myf">百度</a>
+			<a href="http://www.ifeng.com"  target="myf">凤凰网</a>
+			<iframe src="http://www.ifeng.com" name="myf"></iframe>
+			<hr>
+		</details>
+<!-- ===================================================== -->
+		<details>
+			<summary>progress、meter</summary>
+			<form action="">
+				<meter value="20" min="0" max="100" low="30" high="80"></meter>
+				<meter value="50" min="0" max="100" low="30" high="80"></meter>
+				<meter value="90" min="0" max="100" low="30" high="80"></meter>
+			</form>
+			<progress value="50" max="100">50
+			<hr>
+		</details>
+<!-- ===================================================== -->
+		<details>
+			<summary>fieldset、legend</summary>
+			<fieldset>
+				asdlkfjladkjsf
+				<legend>tttt</legend>
+				asdflkjalsdkjf
+			</fieldset>
+			<hr>
+		</details>
+<!-- ===================================================== -->
+		<details>
+			<summary>output、range</summary>
+			<form action="" oninput="num.value=parseInt(num1.value)+parseInt(num2.value)">
+				<input type="number" id="num1">+
+				<input type="number" id="num2">=
+				<output name="num" for="num1 num2"></output>
+			</form>
+
+			<form action="" oninput="o.value=r.value">
+				<input type="range" name="r" value="50">
+				<output name="o" for="r">50</output>
+			</form>
+			<hr>
+		</details>
+<!-- ===================================================== -->
+		<details >
+			<summary>label、checkbox</summary>
+			<input type="checkbox" name="cb" id="cb1" value="1" checked=""><label for="cb1">一</label>
+			<input type="checkbox" name="cb" id="cb2" value="2"><label for="cb2">二</label>
+			<input type="checkbox" name="cb" id="cb3" value="3"><label for="cb3">三</label>
+			<hr>
+		</details>
+<!-- ===================================================== -->
+		<details>
+			<summary>form、input</summary>
+			<form action="">
+				请输入学号：<input type="text" name="code" pattern="[0-9]{1}[a-z]{2}">
+				<input type="submit">	<!-- 正则表达式 -->
+			</form>
+
+			<form action="" method="post">
+				<input type="file" multiple="">
+				<input type="submit">
+			</form>
+
+			<form action="" method="post">
+				<input type="file" multiple="">
+				<input type="submit">
+			</form>
+
+			<form action="" method="post">
+				用户名：<input type="text" autofocus="" name="user" required="">
+				密码：<input type="password" placeholder="请输入密码" name="passwd">
+				数字：<input type="number" name="number">
+				Eamil: <input type="Eamil" readonly="" value="只读">
+				<input type="checkbox" name="cb" value="1" checked="">一
+				<input type="checkbox" name="cb" value="2">二
+				<input type="checkbox" name="cb" value="3">三
+				<input type="radio" name="ra" value="1">男
+				<input type="radio" name="ra" value="2">女
+				<input type="color">
+				<input type="submit">
+				<input type="reset">
+			</form>
+			<hr>
+		</details>
+<!-- ===================================================== -->
+		<details>
+			<summary>iframe</summary>
+			<a href="http://www.ifeng.com" target="myframe">凤凰网</a>
+			<a href="http://www.ixiqi.com" target="myframe">爱稀奇</a><br>
+			<iframe src="http://www.baidu.com" name="myframe" frameborder="0"></iframe>
+			<hr>
+		</details>
+<!-- ===================================================== -->
+		<details>
+			<summary>figure、figcaption</summary>
+			<figure>
+				<img src="*.jpg" alt="图片" width="300"><img src="*.jpg" alt="图片" width="300">
+			</figure>
+			<figcaption>我的厨艺作品-馒头</figcaption>
+			<hr>
+		</details>
+<!-- ===================================================== -->
+		<details>
+			<summary>address</summary>
+			<address>
+				作者：****；邮箱：1223@163.com..........
+			</address>
+			<hr>
+		</details>
+<!-- ===================================================== -->
+		<details>
+			<summary>nav、ul、li</summary>
+			<nav>
+				<ul>
+					<li><a href="">首页</a></li>
+					<li><a href="">电脑办公</a></li>
+					<li><a href="">平面设计</a></li>
+					<li><a href="">设计素材</a></li>
+					<li><a href="">电脑办公</a></li>
+					<li><a href="">平面设计</a></li>
+					<li><a href="">设计素材</a></li>
+					<li><a href="">自学交流</a></li>
+				</ul>
+			</nav>
+			<hr>
+		</details>
+<!-- ===================================================== -->
+		<details>
+			<summary>article、header、footer、section、time、aside</summary>
+			<article>
+				<header>
+					<h3>文章标题</h3>
+					<h5>作者：***</h5>
+				</header>
+				<p>我是正文********************<br>********************<br>********************<br>********************<br></p>
+				<section>
+					<article>
+						<header><h4>网友A的评论</h4></header>
+						<p>评论内容......................</p>
+						<footer><time datetime="2015-10-22">文章发表于2015年10月22日</time>
+</footer>
+					</article>
+					<article>
+						<header><h4>网友b的评论</h4></header>
+						<p>评论内容......................</p>
+						<footer><time datetime="2015-10-22">文章发表于2015年10月22日</time>
+</footer>
+					</article>
+					<footer>
+						<p>尾部：阅读：300 评论：80</p>
+					</footer>
+					<aside>
+						<p>名词解释：-------</p>
+						<p>本文参考了《****》：-------</p>
+					</aside>
+				</section>
+			</article>
+			<hr>
+		</details>
+<!-- ===================================================== -->
+		<details>
+			<summary>talbe</summary>
+			<table id="tb" cellspacing="0">
+				<tr><td colspan="2" id="td1">我是头部</td> </tr>
+				<tr><td id="td2">我是侧边栏</td><td id="td3">我是主体内容</td></tr>
+				<tr><td colspan="2" id="td4">我是底部内容</td></tr>
+			</table>
+			<hr>
+		</details>
+<!-- ===================================================== -->
+		<details>
+			<summary>锚点</summary>
+			<p>中国古典长篇小说四大名著，简称四大名著，是指<a href="#sgyy"><b>《三国演义》</b></a>平和艺术成就，细致的刻画和所蕴含的深刻思想都为历代读者所称道，其中的故事、场景、人物已经深深地影响了中国人的思想观念、价值取向。可谓中国文学史上的四座伟大丰碑。</p>
+			<br><br><br><br>
+			<a id="sgyy"> <h2>《三国演义》</h2>
+			<p>《三国演义》全名：《三国志通俗演义》</p>
+			<p>
+				作者：罗贯中（ 约1330年—约1400年），名本、才本，字贯中，号湖海散人。元末明初作家，戏曲家。罗贯中生于元末社会动乱之时，有自己的政治理想，不苟同于流俗，曾参与反元的起义斗争。明朝建立之后，专心致力于文学创作。著有小说《隋唐两朝志传》、《残唐五代史演义》、《三遂平妖传》、《粉妆楼》、《三国演义》、施耐庵合著《水浒传》，另著有剧本《赵太祖龙虎风云会》、《忠正孝子连环谏》、《三平章死哭蜚虎子》
+			</p>
+			<p>
+			   三国演义介绍：《三国演义》是综合民间传说和戏曲、话本，结合陈寿的《三国志》、范晔《后汉书》、元代《三国志平话》、和裴松之注的史料，以及作者个人对社会人生的体悟写成。现所见刊本以明嘉靖本最早，分24卷，240则。清初毛宗岗父子又做了一些修改，并成为现在最常见的120回本。
+			</p>
+			<hr>
+		</details>
+	</body>
+</html> 
