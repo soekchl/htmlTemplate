@@ -37,9 +37,18 @@
 <!-- ===================================================== -->
 
 		<details>
+			<summary></summary>
+			<hr>
+		</details>
+<!-- ===================================================== -->
+
+		<details>
 			<summary>video、</summary>
-			<video src="mp4地址.mp4" controls="显示控件" title="动画显示" loop="循环播放">
-			浏览器不支持H5 video元素
+			<video controls="显示控件" title="动画显示" loop="循环播放">
+				<source src="mp4地址.mp4" type="video/mp4">	<!-- 兼容 -->
+				<source src="webm视频地址.webm" type="video/webm">
+				<source src="ogg视频地址.ogg" type="video/ogg">
+				浏览器不支持H5 video元素
 			</video>
 			<hr>
 		</details>
