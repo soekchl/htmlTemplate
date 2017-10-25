@@ -43,6 +43,62 @@
 <!-- ===================================================== -->
 
 		<details>
+			<summary>canvas 绘制拼图 百分比</summary>
+			<canvas id="mycanvas2" width="800" height="600" >
+				浏览器不支持H5 canvas元素
+			</canvas>
+			<hr>
+			<script type="text/javascript">
+				var canvas = document.getElementById('mycanvas2')
+					ctx = canvas.getContext('2d')
+					ctx.shadowOffsetX = 0
+					ctx.shadowOffsetY = 8
+					ctx.shadowBlur = 8
+					ctx.shadowColor = 'black'
+
+					ctx.fillStyle = "black"
+					ctx.font = "50px 楷体"
+					ctx.fillText("绘制拼图", 50, 50)
+
+					ctx.fillStyle="brown"
+					ctx.moveTo(400,300)
+					ctx.arc(400, 300, 160, 0, Math.PI / 3)
+					ctx.fill()
+					ctx.fillStyle = "black"
+					ctx.font = "20px 楷体"
+					ctx.fillText("15%", 470, 350)
+
+					ctx.beginPath()
+					ctx.fillStyle="blue"
+					ctx.moveTo(400,300)
+					ctx.arc(400, 300, 160, Math.PI / 3, Math.PI )
+					ctx.fill()
+					ctx.fillStyle = "black"
+					ctx.font = "20px 楷体"
+					ctx.fillText("33.3%", 350, 350)
+
+					ctx.beginPath()
+					ctx.fillStyle="yellowgreen"
+					ctx.moveTo(400,300)
+					ctx.arc(400, 300, 160, Math.PI, Math.PI * 5/ 3)
+					ctx.fill()
+					ctx.fillStyle = "black"
+					ctx.font = "20px 楷体"
+					ctx.fillText("33.3%", 350, 250)
+
+					ctx.beginPath()
+					ctx.fillStyle="green"
+					ctx.moveTo(400,300)
+					ctx.arc(400, 300, 160, Math.PI* 5/ 3, Math.PI * 2)
+					ctx.fill()
+					ctx.fillStyle = "black"
+					ctx.font = "20px 楷体"
+					ctx.fillText("15%", 470, 250)
+			</script>
+		</details>
+<!-- ===================================================== -->
+
+		<details>
 			<summary>canvas 太极图案</summary>
 			<canvas id="mycanvas1" width="800" height="600" >
 				浏览器不支持H5 canvas元素
