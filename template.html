@@ -43,6 +43,30 @@
 <!-- ===================================================== -->
 
 		<details>
+			<summary>canvas</summary>
+			<canvas id="mycanvas" width="800" height="600" >
+				浏览器不支持H5 canvas元素
+			</canvas>
+			<script type="text/javascript">
+				var canvas = document.getElementById('mycanvas');
+				var ctx = canvas.getContext('2d');
+
+				ctx.rect(50,50,100,200);
+				ctx.stroke();
+
+				ctx.beginPath();
+
+				ctx.fillStyle='blue';
+				ctx.fillRect(200,200,10,200);
+
+				ctx.strokeStyle = 'yellowgreen';
+				ctx.strokeRect(300,300,20,20);
+			</script>
+			<hr>
+		</details>
+<!-- ===================================================== -->
+
+		<details>
 			<summary>video、audio、flash</summary>
 			<video controls="显示控件" title="动画显示" loop="循环播放" title="视频播放">
 				<source src="mp4地址.mp4" type="video/mp4">	<!-- 兼容 -->
