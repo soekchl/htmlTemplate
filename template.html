@@ -86,6 +86,16 @@
 					ctx.fillStyle=g4
 					ctx.arc(400, 200, 10, 0, Math.PI*2)
 					ctx.fill()
+
+					ctx.shadowOffsetX = 10
+					ctx.shadowOffsetY = 10
+					ctx.shadowBlur = 10 // 模糊度
+					ctx.shadowColor = 'blue'
+
+					ctx.lineWidth = 1;	
+					ctx.fillStyle = "red"
+					ctx.font="70px 楷体"
+					ctx.fillText("太极阴影", 50, 50)
 			</script>
 		</details>
 <!-- ===================================================== -->
