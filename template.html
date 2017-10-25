@@ -68,6 +68,19 @@
 				ctx.arc(200,200, 100, Math.PI, Math.PI * 2);
 				ctx.stroke();
 				ctx.fill();
+				ctx.closePath()
+
+				ctx.lineWidth = 1;
+				ctx.font="50px 楷体"
+				ctx.strokeText("看", 450, 400)
+				ctx.fillText("看", 500, 400)
+				ctx.closePath()
+
+				g = ctx.createLinearGradient(0,0,800,600)
+				g.addColorStop(0, "blue")
+				g.addColorStop(1, "red")
+				ctx.fillStyle = g;
+				ctx.fillRect(50,550,700,100)
 			</script>
 			<hr>
 		</details>
