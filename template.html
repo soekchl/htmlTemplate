@@ -43,6 +43,54 @@
 <!-- ===================================================== -->
 
 		<details>
+			<summary>canvas 太极图案</summary>
+			<canvas id="mycanvas1" width="800" height="600" >
+				浏览器不支持H5 canvas元素
+			</canvas>
+			<hr>
+			<script type="text/javascript">
+				var canvas = document.getElementById('mycanvas1')
+					ctx = canvas.getContext('2d')
+					g1 = ctx.createLinearGradient(400, 100, 400, 500)
+					g1.addColorStop(0, "black")
+					g1.addColorStop(1, "white")
+					g2 = ctx.createLinearGradient(400, 100, 400, 500)
+					g2.addColorStop(0, "white")
+					g2.addColorStop(1, "black")
+					g3 = ctx.createRadialGradient(400, 400, 1, 400, 400, 10)
+					g3.addColorStop(0, "white")
+					g3.addColorStop(1, "black")
+					g4 = ctx.createRadialGradient(400, 200, 1, 400, 200, 10)
+					g4.addColorStop(0, "black")
+					g4.addColorStop(1, "white")
+
+					ctx.arc(400,300,200,Math.PI/2, Math.PI*1.5)
+					ctx.arc(400,200,100,Math.PI/2, Math.PI*1.5, true)
+					ctx.arc(400,400,100,Math.PI*1.5, Math.PI/2, true)
+					ctx.fillStyle = g1
+					ctx.fill()
+					
+					ctx.beginPath()
+					ctx.arc(400,300,200,Math.PI/2, Math.PI*1.5, true)
+					ctx.arc(400,400,100,Math.PI/2, Math.PI*1.5)
+					ctx.arc(400,200,100,Math.PI*1.5, Math.PI/2)
+					ctx.fillStyle = g2
+					ctx.fill()
+
+					ctx.beginPath()
+					ctx.fillStyle=g3
+					ctx.arc(400, 400, 10, 0, Math.PI*2)
+					ctx.fill()
+
+					ctx.beginPath()
+					ctx.fillStyle=g4
+					ctx.arc(400, 200, 10, 0, Math.PI*2)
+					ctx.fill()
+			</script>
+		</details>
+<!-- ===================================================== -->
+
+		<details>
 			<summary>canvas</summary>
 			<canvas id="mycanvas" width="800" height="600" >
 				浏览器不支持H5 canvas元素
@@ -77,8 +125,8 @@
 				ctx.closePath()
 
 				g = ctx.createLinearGradient(0,0,800,600)
-				g.addColorStop(0, "blue")
-				g.addColorStop(1, "red")
+				g.addColorStop(0, "blue") // 渐变色起点颜色
+				g.addColorStop(1, "red")  // 渐变色终点颜色
 				ctx.fillStyle = g;
 				ctx.fillRect(50,550,700,100)
 			</script>
