@@ -14,4 +14,4 @@ button:hover{background: green; padding: 8px; border-radius: 8px;} /*鼠标经�
 input{padding: 8px; background: #f8f8f8}
 input:focus{padding: 8px; background: #ffc0cb} /*获取焦点时*/
 #section1{width: 400px; background: beige; padding: 10px; margin-left: 150px; margin-top: 150px}
-h1{text-shadow: #a9a9a9 5px 5px 3px; text-align: center;}
+h1{text-shadow: #a9a9a9 5px 5px 3px; text-align: center;color: blue !important}
