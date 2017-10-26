@@ -27,3 +27,12 @@ input[value][style="1"]{background: blue}   /*style ~= "1" 其中一个相等*/
 ul li{color: red}    /*ul下面的所有li*/
 ul > li{color: blue}  /*只有ul下面的li*/
 h2+p{color: red}   /*h2标签后面的p*/
+p::first-letter{font-size: 50px}
+p::first-line{color:green;}
+a::before{
+	content: "点击"
+}
+a::after{
+	content: url(ifeng.jpg);
+}
+p::selection{color: red; background: green}  /*选择时颜色*/
