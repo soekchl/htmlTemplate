@@ -24,3 +24,6 @@ h3.class1{color: green}
 input[value]{background: green}
 input[value][style]{background: green}
 input[value][style="1"]{background: blue}   /*style ~= "1" 其中一个相等*/
+ul li{color: red}    /*ul下面的所有li*/
+ul > li{color: blue}  /*只有ul下面的li*/
+h2+p{color: red}   /*h2标签后面的p*/
