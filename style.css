@@ -36,3 +36,6 @@ a::after{
 	content: url(ifeng.jpg);
 }
 p::selection{color: red; background: green}  /*选择时颜色*/
+#p1{font-size: 50px}  /* 像素*/
+#p2{font-size: 200%}  /* 百分比*/
+#p3{font-size: 1.5em}   /* 倍数*/
