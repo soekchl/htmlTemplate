@@ -9,13 +9,16 @@ tr{vertical-align: text-top;}
 #td4{height: 10%;background: blue}
 nav{width: 100%;height: 40px;background: #E0FFFF;text-align: center;padding: 6px;}
 li{display: inline;}
-a{text-decoration: none;}
+a{text-decoration: none;}  /* 下划线去掉 */
 button{background: yellowgreen; padding: 8px; border-radius: 8px;}
 button:hover{background: green; padding: 8px; border-radius: 8px;} /*鼠标经过时*/
 input{padding: 8px; background: #f8f8f8}
 input:focus{padding: 8px; background: #ffc0cb} /*获取焦点时*/
 #section1{width: 400px; background: beige; padding: 10px; margin-left: 150px; margin-top: 150px}
-h1{text-shadow: #a9a9a9 5px 5px 3px; text-align: center;color: blue;}
+h1{
+	text-shadow: #a9a9a9 5px 5px 3px, 5px 5px 5px rgba(255,0,0,0.2); /*阴影    水平，竖向偏移，模糊度 颜色*/
+	text-align: center;color: blue;
+}
 #div1{background: yellowgreen; width: 50% ; color: red ; border: 2px blue solid}
 p{border: 1px red solid}
 #test_p{color: yellowgreen}
@@ -49,3 +52,14 @@ p::selection{color: red; background: green}  /*选择时颜色*/
 	src: url("xxx.ttf"); /*自定义字体*/
 }
 #p9{font-family: abc}   /*www.youziku.com   从这里下载新的字体*/
+#p11{
+	color: yellowgreen; text-align: justify;/*justify 两边对齐*/
+	width: 50%; line-height: 2em;
+	text-indent: 2em;  /*首行缩进*/
+	letter-spacing: 0.5em;   /* 字间距 */
+}  
+#p12{
+	text-transform: uppercase;	/*大写*/
+	text-transform: lowercase;   /*小写*/
+	text-transform: capitalize;  /*首字母大写*/
+}
