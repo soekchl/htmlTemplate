@@ -39,3 +39,13 @@ p::selection{color: red; background: green}  /*选择时颜色*/
 #p1{font-size: 50px}  /* 像素*/
 #p2{font-size: 200%}  /* 百分比*/
 #p3{font-size: 1.5em}   /* 倍数*/
+#p4{font-variant: small-caps;}  /*小型大写字母*/
+#p5{font-style: italic;}      /*倾斜字体*/
+#p6{font-weight: bold;}     /*粗体*/
+#p7{font-family: 楷体,隶书}  /* 当前一个不存在的时候就显示后面的字体*/
+#p8{font: bold italic small-caps 60px 楷体}   /*按照指定顺序显示  至少需要大小和字体*/
+@font-face{
+	font-family: "abc";
+	src: url("xxx.ttf"); /*自定义字体*/
+}
+#p9{font-family: abc}   /*www.youziku.com   从这里下载新的字体*/
