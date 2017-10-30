@@ -107,3 +107,7 @@ div{
 	left: 450px;
 	top: 100px;
 }
+#img1{
+	position: absolute;
+	clip: rect(210px, 265px, 310px, 170px);
+}
