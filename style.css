@@ -103,7 +103,7 @@ div{
 #div6{
 	background: rgba(0,0,255,0.5);
 	/*position: relative;*/
-	position: absolute;
+	position: fixed;   /*浏览器绝对定位*/
 	left: 450px;
 	top: 100px;
 }
