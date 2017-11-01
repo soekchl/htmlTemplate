@@ -35,6 +35,16 @@
 				function fun() {
 					alert("矩形面积为："+c.value * k.value)
 				}
+				
+				function poeple() {
+				var sum = 0
+				for (var i = 0; i < arguments.length; i++) {
+					document.write(arguments[i], i+1 == arguments.length ?"=":"+")
+					sum += arguments[i]
+				}
+				document.write(sum)
+			}
+			poeple(12,31,23,12,31,23,123,2,3)
 			</script>
 		</details>
 <!-- ===================================================== -->
