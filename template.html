@@ -35,16 +35,18 @@
 				var canvas = document.getElementById('mycanvas3')
 				var ctx = canvas.getContext('2d')
 
-				var n = 30;
-				var r = 10;
-				for (var i = 0; i < 20; i++) {
-					for (var j = 0; j < 10; j++) {
-						ctx.fillStyle = 'rgba(240,'+ i*j +','+i*j+','+(i+1)/20+')'
+				draw(30, 10, 240)
 
-						ctx.beginPath()
-						ctx.arc(15 + i*n, 15 + j*n,r,0, Math.PI*2, true)
-						ctx.fill()	
-						ctx.closePath()
+				function draw(n,r,R) {
+					for (var i = 0; i < 20; i++) {
+						for (var j = 0; j < 10; j++) {
+							ctx.fillStyle = 'rgba('+R+','+ i*j +','+i*j+','+(i+1)/20+')'
+
+							ctx.beginPath()
+							ctx.arc(15 + i*n, 15 + j*n,r,0, Math.PI*2, true)
+							ctx.fill()	
+							ctx.closePath()
+						}
 					}
 				}
 			</script>
