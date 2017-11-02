@@ -25,6 +25,82 @@
 			<hr>
 		</details>
 <!-- ===================================================== -->
+	
+		<details>
+			<summary>数组相关操作</summary>
+			<script>
+				function show(arr) {
+					document.write("<br>")
+					for (var i = 0; i < arr.length; i++) {
+						document.write(arr[i],",")
+					}	
+				}
+				var arr = new Array(4)
+				arr.length = 9
+				document.write(arr.length)
+				arr.push(22) // 末尾压入
+				document.write(arr)
+				for (var i = 0; i < arr.length; i++) {
+					arr[i] = i+1
+				}
+				document.write("<br>")
+				for (var i = 0; i < arr.length; i++) {
+					document.write(arr[i],",")
+				}
+				delete arr[5]				
+				show(arr)
+				arr.pop() // 末尾输出
+				show(arr)
+				arr.shift(arr) //首部删除
+				show(arr)
+				document.write("<br>", arr.toString()) // 改成字符串
+				document.write("<br>", arr.join('-'))
+				show(arr.reverse()) //逆序
+				arr[5] = 22
+				arr.sort()	// 排序
+				show(arr)
+
+				function sortFun(a, b) {
+					if (a > b ) {
+						return 1
+					} else if (a < b) {
+						return -1
+					}
+					return 0
+				}
+				arr.sort(sortFun)
+				show(arr)
+
+				var arr1 = ['a','b']
+				arr = arr.concat(arr1)
+				show(arr)
+				arr = arr.concat(1,2,3,4,4,5)
+				show(arr)
+			</script>
+			<hr>
+		</details>
+<!-- ===================================================== -->
+
+		<details>
+			<summary>js的对象等等</summary>
+			<script>
+				var people = {}
+				people.name = "是哪"
+				people.sex = "男"
+				people.age = 44
+				people.测试 = 123
+				delete people.测试
+				document.write("<br>",people.name, people.sex, people.age, people.测试)
+				function say() {
+					document.write('asdlfkjasdf')
+				}
+				people.say = say
+
+				people.say()
+			</script>
+			<hr>
+		</details>
+<!-- ===================================================== -->
 
 		<details>
 			<summary>canvas、JavaScript 练习</summary>
