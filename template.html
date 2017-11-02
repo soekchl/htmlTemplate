@@ -31,8 +31,8 @@
 			<script>
 				function show(arr) {
 					document.write("<br>")
-					for (var i = 0; i < arr.length; i++) {
-						document.write(arr[i],",")
+					for (x in arr) {
+						document.write(arr[x],",")
 					}	
 				}
 				var arr = new Array(4)
@@ -79,6 +79,17 @@
 				arr.splice(0,0,  444) // 开始下标，元素个数，替换/插入的元素 们
 				show(arr)
 				show(arr.slice(3,6)) // 切片
+
+				brr= arr.slice(3,6)
+				brr[0]=321
+				show(arr)
+				show(brr)
+
+				var person = {name:"Luke", age : 12 , sex:"male"}
+
+				for (x in person) {
+					document.write(x, "=",person[x],"<br>")
+				}
 			</script>
 			<hr>
 		</details>
