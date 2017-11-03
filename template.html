@@ -25,6 +25,60 @@
 			<hr>
 		</details>
 <!-- ===================================================== -->
+
+		<details>
+			<summary>date 时间相关</summary>
+				<script>
+					// var date = new Date()
+					// var date = new Date(1213132132121)  // 毫秒数
+					var date = new Date(2017,11,3,09,57,22)	
+					document.write(date)		
+
+					document.write("<br>")
+
+					var date1 = new Date()
+					// document.write(Date.parse("11/3/2016")) // 2016.11.03
+					document.write(Date.parse(date1))
+					document.write("<br>")
+					document.write(Date.UTC(2017,11,3,10,4))
+					document.write("<br>")
+
+					document.write(date1.toString())
+					
+					document.write("<br>")
+					var t2 = date1.toDateString()	// 日期部分
+					document.write(t2)
+
+					document.write("<br>")
+					var t3 = date1.toTimeString()	// 时间部分
+					document.write(t3)
+
+					document.write("<br>")
+					var t4 = date1.toLocaleString()	// 本地时间
+					document.write(t4)
+
+					document.write("<br>")
+					var t5 = date1.valueOf()	// 毫秒数
+					document.write(t5)
+
+					document.write(date.toLocaleString(), " <br>")		
+
+					document.write("getDate = ",date.getDate(), " <br>")
+					document.write("getDay = ",date.getDay(), " <br>") // 星期日-0 星期1-1
+					document.write("getFullYear = ",date.getFullYear(), " <br>")
+					document.write("getHours = ",date.getHours(), " <br>")
+					document.write("getMilliseconds = ",date.getMilliseconds(), " <br>")
+					document.write("getMonth = ",date.getMonth(), " <br>")
+					document.write("getSeconds = ",date.getSeconds(), " <br>")
+					document.write("getTime = ",date.getTime(), " <br>")
+
+					date.setFullYear(2222)
+					document.write("getFullYear = ",date.getFullYear(), " <br>")
+
+				</script>
+			<hr>
+		</details>
+<!-- ===================================================== -->
 	
 		<details>
 			<summary>数组相关操作</summary>
