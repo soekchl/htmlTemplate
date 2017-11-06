@@ -21,7 +21,24 @@
 <!-- ===================================================== -->
 
 		<details>
-			<summary></summary>
+			<summary>字符串操作</summary>
+			<script>
+				var str = "hello"
+				document.write(str," =",str.length,"<br>")
+
+				var num = 25
+				document.write("num.toString(2) ",num.toString(2), "<br>")
+				document.write("num.toString(8) ",num.toString(8), "<br>")
+				document.write("num.toString(16) ",num.toString(16), "<br>")
+
+				str = "123.121"
+				document.write("parseInt ",parseInt(str), "<br>")
+				document.write("parseFloat ",parseFloat(str), "<br>")
+				document.write("Number ",Number(str),"<br>")
+
+				str = "0xa12313"
+				document.write("Number ",Number(str),"<br>")
+			</script>
 			<hr>
 		</details>
 <!-- ===================================================== -->
