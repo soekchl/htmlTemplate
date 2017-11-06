@@ -1,12 +1,12 @@
-function search() 
+ï»¿function search() 
 {
 	var in_ = document.getElementById('input1')
 	var out = document.getElementById('label1')
 	var year = Number(in_.value)
 	if ( (year %4==0 && year %100 != 0) || (year %400 ==0 ) ){
-		out.innerHTML  = "½á¹û£ºÈòÄê"
+		out.innerHTML  = "ç»“æœï¼šé—°å¹´"
 	} else {
-		out.innerHTML  = "½á¹û£º²»ÊÇÈòÄê"
+		out.innerHTML  = "ç»“æœï¼šä¸æ˜¯é—°å¹´"
 	}
 }
 
@@ -15,7 +15,7 @@ function setBg()
 	bg_color = document.getElementById('color_1')
 	bg = document.getElementById('test_body')
 	a = document.getElementById('range_a')
-	var rg = Number(a.value)/100   // Í¸Ã÷¶È
+	var rg = Number(a.value)/100   // é€æ˜åº¦
 	bg.style['background'] = "rgba("+Number("0x"+bg_color.value.slice(1,3))+","+Number("0x"+bg_color.value.slice(3,5))+","+Number("0x"+bg_color.value.slice(5,7))+","+rg+")"
 }
 
@@ -24,7 +24,7 @@ function randSetBg()
 	var r = getRandom(1, 255)
 	var g = getRandom(1, 255)
 	var b = getRandom(1, 255)
-	var rg = getRandom(1,100)/100   // Í¸Ã÷¶È
+	var rg = getRandom(1,100)/100   // é€æ˜åº¦
 	bg = document.getElementById('test_body')
 	bg.style['background'] = "rgba("+r+","+g+","+b+","+rg+")"
 }
