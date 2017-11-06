@@ -21,6 +21,12 @@
 <!-- ===================================================== -->
 
 		<details>
+			<summary></summary>
+			<hr>
+		</details>
+<!-- ===================================================== -->
+
+		<details>
 			<summary>字符串操作</summary>
 			<script>
 				var str = "hello"
@@ -38,6 +44,18 @@
 
 				str = "0xa12313"
 				document.write("Number ",Number(str),"<br>")
+
+				str = "hello"
+				document.write("str.charAt(0) ",str.charAt(0),"<br>")
+				document.write("str[0] ",str[0],"<br>")
+				document.write("str.charCodeAt(0) ",str.charCodeAt(0),"<br>")
+				document.write("str.concat(\"123\") ",str.concat("123"),"<br>")
+				document.write("str.slice(1,3) ",str.slice(1,3),"<br>")
+				str="12 1231231 123 1231 2312 3"
+				arr = str.split(' ')
+				for (var i = 0; i < arr.length; i++) {
+					document.write(arr[i], "<br>")
+				}
 			</script>
 			<hr>
 		</details>
