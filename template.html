@@ -36,9 +36,8 @@
 				<label id="label1">结果：</label>
 				<hr>
 
-				<input type="color" id="color_1" value="#546587">
-				<input type="range" min="1" max="100" id="range_a">
-				<input type="button" value="设置背景颜色" onclick="setBg()">
+				<input type="color" id="color_1" value="#546587" onchange="setBg()">
+				<input type="range" min="1" max="100" id="range_a" onchange="setBg()">
 				<hr>
 
 				<input type="button" value="随机设置背景颜色" onclick="randSetBg()">
