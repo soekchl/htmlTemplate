@@ -28,7 +28,7 @@
 <!-- ===================================================== -->
 
 		<details>
-			<summary>alert、confirm、prompt、close、倒计时、时钟、history、location</summary>
+			<summary>alert、confirm、prompt、close、倒计时、时钟、history、location、screen、navigator</summary>
 			<input type="button" onclick="test_confirm()" value="confirm">
 			<input type="button" onclick="test_prompt()" value="prompt">
 			<input type="button" onclick="test_open()" value="open">
@@ -41,6 +41,10 @@
 			<input type="button" onclick="settimeout(1000)" value="1秒后">
 			<input type="button" onclick="cleartimeout()" value="取消">
 			<br>
+			<input type="button" value="跳转百度" onclick="location.assign('http://www.baidu.com')">
+			<input type="button" value="刷新" onclick="location.reload()">
+			<input type="button" value="跳转百度" onclick="location.replace('http://www.baidu.com')">    <!-- 跳转百度 不留记录 -->
+			<br>
 			<script>
 				// print()  // 打印
 				document.write("location.href = " ,location.href, " <br>")
@@ -51,6 +55,16 @@
 				document.write("location.port = " ,location.port, " <br>")
 				document.write("location.protocol = " ,location.protocol, " <br>")
 				document.write("location.search = " ,location.search, " <br>")
+				document.write("screen.availHeight 不包含工具栏 ",screen.availHeight, "<br>")
+				document.write("screen.Height 包含工具栏 ",screen.height, "<br>")
+
+				document.write("navigator.appCodeName 浏览器代码名：",navigator.appCodeName, "<br>")
+				document.write("navigator.appMinorVersion 浏览器次级版本：",navigator.appMinorVersion, "<br>")
+				document.write("navigator.appName 浏览器名称：",navigator.appName, "<br>")
+				document.write("navigator.appVersion 浏览器版本：",navigator.appVersion, "<br>")
+				document.write("navigator.cookieEnabled 浏览器是否启用cookie：",navigator.cookieEnabled, "<br>")
+				document.write("navigator.userAgent ：",navigator.userAgent, "<br>")
+				document.write("navigator.onLine 浏览器脱机模式：",navigator.onLine, "<br>")
 			</script>
 			<br>
 			<input type="button" value="返回" onclick="history.back()">
