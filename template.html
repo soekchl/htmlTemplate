@@ -28,11 +28,18 @@
 <!-- ===================================================== -->
 
 		<details>
-			<summary>alert、confirm、prompt、close</summary>
+			<summary>alert、confirm、prompt、close、倒计时、时钟</summary>
 			<input type="button" onclick="test_confirm()" value="confirm">
 			<input type="button" onclick="test_prompt()" value="prompt">
 			<input type="button" onclick="test_open()" value="open">
 			<input type="button" onclick="test_close()" value="close">
+			<br>
+			倒计时：<label id="label_2">100.00</label> 
+			<input type="button" onclick="startInterval(10)" value="开始">   <!-- 0.01秒一次 -->
+			<input type="button" onclick="stopInterval()" value="结束">
+			<br>
+			<input type="button" onclick="settimeout(1000)" value="1秒后">
+			<input type="button" onclick="cleartimeout()" value="取消">
 			<hr>
 		</details>
 <!-- ===================================================== -->

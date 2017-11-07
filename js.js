@@ -59,3 +59,40 @@ function test_close()
 		mywin.close() // 关闭指定窗口
 	}
 }
+
+function settimeout(t) {
+	to = setTimeout(function(){alert("1秒后!")}, t)
+}
+function cleartimeout() {
+	clearTimeout(to)
+}
+
+var interval_s = true
+function startInterval(t) {
+	if (interval_s) {
+		cd = setInterval(step, t)
+		interval_s = false
+		lb.innerHTML = 100.00
+	}
+}
+function step() {
+	lb = document.getElementById("label_2")
+	var t = Math.floor(Number(lb.innerHTML)*100-1)
+	if (t < 0) {
+		stopInterval()
+		return
+	}
+	if ( t % 100 == 0 ) {
+		lb.innerHTML = t/100+'.00'
+	} else if ( t % 10 == 0 ) {
+		lb.innerHTML = t/100+'0'
+	} else {
+		lb.innerHTML = t/100
+	}
+}
+function stopInterval() {
+	if (!interval_s) {
+		clearInterval(cd)
+		interval_s = true
+	}
+}
