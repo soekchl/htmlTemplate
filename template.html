@@ -28,7 +28,7 @@
 <!-- ===================================================== -->
 
 		<details>
-			<summary>alert、confirm、prompt、close、倒计时、时钟</summary>
+			<summary>alert、confirm、prompt、close、倒计时、时钟、history</summary>
 			<input type="button" onclick="test_confirm()" value="confirm">
 			<input type="button" onclick="test_prompt()" value="prompt">
 			<input type="button" onclick="test_open()" value="open">
@@ -40,6 +40,16 @@
 			<br>
 			<input type="button" onclick="settimeout(1000)" value="1秒后">
 			<input type="button" onclick="cleartimeout()" value="取消">
+			<script>
+				// print()  // 打印
+				document.write("浏览器的宽度：", innerWidth, " <br>")
+				document.write("浏览器的高度：", window.innerHeight, " <br>")
+			</script>
+			<br>
+			<input type="button" value="返回" onclick="history.back()">
+			<input type="button" value="返回" onclick="history.go(-1)">
+			<input type="button" value="前进" onclick="history.forward()">
+			<input type="button" value="前进" onclick="history.go(1)">
 			<hr>
 		</details>
 <!-- ===================================================== -->
