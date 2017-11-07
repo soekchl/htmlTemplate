@@ -49,5 +49,13 @@ function test_open()
 
 	// open("http://www.baidu.com", "_parent") // 在本窗口打开
 	
-	open("http://www.baidu.com", "window1", "height=300,width=300,top=100,left=200") // 设定打开位置
+	mywin = open("http://www.baidu.com", "window1", "height=300,width=300,top=100,left=200") // 设定打开位置
+}
+
+function test_close() 
+{
+	if (confirm("关闭窗口？")) 
+	{
+		mywin.close() // 关闭指定窗口
+	}
 }
