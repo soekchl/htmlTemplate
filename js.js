@@ -33,3 +33,21 @@ function getRandom(min, max)
 {
 	return Math.floor(Math.random() * (max-1) + min)
 }
+
+function test_confirm() 
+{
+	alert(confirm("确定吗？"))		// 确定取消提示框
+}
+
+function test_prompt() {
+	alert(prompt("请输入姓名：","张三"))	// 输入提示框
+}
+
+function test_open()
+{
+	// open("http://www.baidu.com", "window1") // 按照窗口名称打开
+
+	// open("http://www.baidu.com", "_parent") // 在本窗口打开
+	
+	open("http://www.baidu.com", "window1", "height=300,width=300,top=100,left=200") // 设定打开位置
+}
