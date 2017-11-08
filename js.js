@@ -96,3 +96,22 @@ function stopInterval() {
 		interval_s = true
 	}
 }
+
+var nw
+function fopen() {
+	// body...
+	nw = open("http://www.baidu.com", "_blank", "height=300,width=300,top=100,left=200")
+}
+function fclose() {
+	nw.close()
+}
+function fchange() {
+	nw.moveTo(300,300)  // 需要在服务器运行
+	nw.focus()
+}
+function fresize() {
+	nw.resize(10, 20) // 需要在服务器运行
+	nw.focus()
+
+	// mv.resizeTo(200,300)
+}
