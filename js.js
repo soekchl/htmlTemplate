@@ -115,3 +115,92 @@ function fresize() {
 
 	// mv.resizeTo(200,300)
 }
+
+// 小练习
+var select = "background:blue; color : white"
+var normal = "background:white; color : black"
+var btn_list = new Array()
+var n = 0, m = 0
+var start_btn_flag = false
+
+function start() {
+	var sum = 0
+	var len = getRandom(30,40)
+	var min = 50
+	var max = 800
+	if ( start_btn_flag ) {
+		return
+	}
+	start_btn_flag = true
+	var s = (max-min)/len
+
+	for (var i = 0; i < len; i++) {
+		var now = min
+		if ( i/len < 1/4 ) {
+			now += i*s/10
+		} else if ( i/len < 1/2 ) {
+			now += i*s/4
+		} else if ( len-i <= 2 ) {
+				now = max
+		} else {
+			now += i*s/2
+		}
+		sum += now 
+		setTimeout("stepOne()", sum)
+	}
+	setTimeout("result()", sum+500)
+}
+
+function result() {
+	alert("中午就吃："+ btn_list[m].innerText)
+	start_btn_flag = false
+}
+
+function stepOne() {
+	m = (m+1)%n
+	var j = (m+n-1)%n
+	btn_list[j].style = normal
+	btn_list[m].style = select
+}
+
+function createBtn(arg)
+{
+	var btn = document.createElement("button");
+	if ( arg.length < 1 ) {
+		in_ = document.getElementById("btn_name")
+		btn.innerText = in_.value
+		for (var i = 0; i < btn_list.length; i++) {
+			if (btn.innerText == btn_list[i].innerText) {
+				alert("已存在！")
+				return
+			}
+		}
+		in_.focus()
+	} else {
+		btn.innerText = arg
+	}
+	btn.style=normal
+	var container = document.getElementById("section_game");
+	container.appendChild(btn);
+	btn_list[n++] = btn
+	var index = n-1
+	btn.addEventListener("click", function(){
+		var new_name = prompt("请输入新的菜单：", btn.innerText)
+		if ( new_name != null && new_name.length > 0 ) {
+			btn.innerText = new_name
+		} /*else {
+			container.removeChild(btn)
+			btn_list.splice(index,1)
+		}*/
+	});
+}
+
+function init() {
+	createBtn("香辣肉丝")
+	createBtn("鱼香肉丝")
+	createBtn("宫保鸡丁")
+	createBtn("锅包肉")
+	createBtn("火锅")
+	createBtn("锅贴")
+	createBtn("烧烤")
+}
