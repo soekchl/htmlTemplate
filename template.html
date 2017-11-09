@@ -22,6 +22,30 @@
 <!-- ===================================================== -->
 	
 		<details>
+			<input type="text" id="input_mouse">
+			<summary>键盘事件</summary>
+			<script>
+				var b = document.getElementsByTagName("body")[0]
+				var inp = document.getElementById("input_mouse")
+				b.onkeydown = function(event) {
+					var e = event || window.event || arguments.callee.caller.arguments[0]
+					inp.value=e.keyCode
+					inp.value = evnet.type
+					// event.stopPropagation() // 事件停止传递
+				}
+				b.onkeyup = function () {
+					inp.value="松开"
+				}
+				// document.addEventListener("contextmenu", func)
+				// function func(e) {
+				// 	e.preventDefault() // 阻止默认事件  比方说右键菜单
+				// }
+			</script>
+			<hr>
+		</details>
+<!-- ===================================================== -->
+	
+		<details>
 			<summary>node</summary>
 			element.nodeName 和 element.tagName 返回元素名称 <br>
 			element.nodeType 元素节点类型<br>

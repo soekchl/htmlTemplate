@@ -193,14 +193,14 @@ function createBtn(arg)
 			btn_list.splice(index,1)
 		}*/
 	});
-	// btn.attachEvent('onclick', func_name)
 	// btn.removeEventListener("click", func_name)
 	/*
 		兼容
 		if (btn.addEventListener) {
-			btn.addEventListener("click", func_name)
+			btn.addEventListener("click", func_name, false) // 默认冒泡传递
 		} else if (btn.attachEvent) {
 			btn.attachEvent('onclick', func_name)
+			// btn.detachEvent("onclick", func_name)
 		} else {
 			btn.onclick = func_name()
 		}
