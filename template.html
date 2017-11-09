@@ -20,8 +20,36 @@
 			<hr>
 		</details>
 <!-- ===================================================== -->
-			<details>
+	
+		<details>
 			<summary></summary>
+			<hr>
+		</details>
+<!-- ===================================================== -->
+		<details>
+			<summary>getElementById、getElementsByName、getElementsByTagName</summary>
+			<input type="text" id="input_1">
+			<input type="text" name="input_t">
+			<input type="text" name="input_t">
+			<input type="button" onclick="testGetElementsByTagName()" value="button">
+			<script>
+				var li = document.getElementById("input_1")
+				li.value = "test getElementById"
+
+				// 获取所有名称一样的元素列表
+				var l = document.getElementsByName("input_t")
+				for (var i = 0; i < l.length; i++) {
+					l[i].value = "test getElementsByName"
+				}
+
+				function testGetElementsByTagName() {
+					// 获取所有的input元素 列表
+					var tns = document.getElementsByTagName("input")
+					for (var i = 0; i < tns.length; i++) {
+						tns[i].value = "test"
+					}
+				}
+			</script>
 			<hr>
 		</details>
 <!-- ===================================================== -->
