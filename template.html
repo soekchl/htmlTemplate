@@ -57,6 +57,9 @@
 				tt.style.textShadow="2px 2px 3px blue"
 				tt.style.fontSize = "22px"
 				tt.style.background = "rgba(150,50,25,0.2)"
+				tt.setAttribute("type", "button")
+				document.write(tt.getAttribute("type"), "<br>")
+				tt.removeAttribute("type")
 
 				var tt = document.getElementById("h4")
 				document.write(tt.tagName +" "+ tt.innerHTML)
