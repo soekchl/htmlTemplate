@@ -27,11 +27,13 @@
 		</details>
 <!-- ===================================================== -->
 		<details>
-			<summary>getElementById、getElementsByName、getElementsByTagName</summary>
+			<summary>getElementById、getElementsByName、getElementsByTagName、innerHTML</summary>
 			<input type="text" id="input_1">
 			<input type="text" name="input_t">
 			<input type="text" name="input_t">
 			<input type="button" onclick="testGetElementsByTagName()" value="button">
+			<input type="text" id="input_1" value="testInput">
+			<h4 id="h4">testsetset</h4>	
 			<script>
 				var li = document.getElementById("input_1")
 				li.value = "test getElementById"
@@ -49,6 +51,18 @@
 						tns[i].value = "test"
 					}
 				}
+				var tt = document.getElementById("input_1")
+				document.write(tt.tagName +" "+ tt.value)
+				// tt.style.background = 'blue'
+				tt.style.textShadow="2px 2px 3px blue"
+				tt.style.fontSize = "22px"
+				tt.style.background = "rgba(150,50,25,0.2)"
+
+				var tt = document.getElementById("h4")
+				document.write(tt.tagName +" "+ tt.innerHTML)
+				tt.innerHTML = "hello test" // 设置或返回 元素的内容
+
+				document.write(tt.id," name:",tt.name," className:",tt.className, " title:", tt.title)
 			</script>
 			<hr>
 		</details>
